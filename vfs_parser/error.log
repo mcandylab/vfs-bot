@@ -1,0 +1,340 @@
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+ERROR:root:Неожиданная ошибка: 
+无法找到浏览器可执行文件路径，请手动配置。
+版本: 4.1.0.18
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (5): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (6): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (7): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (8): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (9): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (10): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (11): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (12): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (13): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (14): 127.0.0.1:9222
+ERROR:root:Ошибка подключения к браузеру: 
+浏览器连接失败。
+地址: 127.0.0.1:9222
+提示: 
+1、用户文件夹没有和已打开的浏览器冲突
+2、如为无界面系统，请添加'--headless=new'启动参数
+3、如果是Linux系统，尝试添加'--no-sandbox'启动参数
+可使用ChromiumOptions设置端口和用户文件夹路径。
+版本: 4.1.0.18
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (5): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (6): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (7): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (8): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (9): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (10): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (11): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (12): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (13): 127.0.0.1:9222
+ERROR:root:Ошибка подключения к браузеру: 
+浏览器连接失败。
+地址: 127.0.0.1:9222
+提示: 
+1、用户文件夹没有和已打开的浏览器冲突
+2、如为无界面系统，请添加'--headless=new'启动参数
+3、如果是Linux系统，尝试添加'--no-sandbox'启动参数
+可使用ChromiumOptions设置端口和用户文件夹路径。
+版本: 4.1.0.18
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (2): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (3): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (4): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (5): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (6): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (7): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (8): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (9): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (10): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (11): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (12): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (13): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (14): 127.0.0.1:9222
+ERROR:root:Ошибка подключения к браузеру: 
+浏览器连接失败。
+地址: 127.0.0.1:9222
+提示: 
+1、用户文件夹没有和已打开的浏览器冲突
+2、如为无界面系统，请添加'--headless=new'启动参数
+3、如果是Linux系统，尝试添加'--no-sandbox'启动参数
+可使用ChromiumOptions设置端口和用户文件夹路径。
+版本: 4.1.0.18
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+ERROR:root:Неожиданная ошибка: 
+无法找到浏览器可执行文件路径，请手动配置。
+版本: 4.1.0.18
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/11" 200 5251
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/11" 200 419
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/11" 200 5251
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+ERROR:root:Неожиданная ошибка: 
+无法找到浏览器可执行文件路径，请手动配置。
+版本: 4.1.0.18
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+ERROR:root:Неожиданная ошибка: 
+无法找到浏览器可执行文件路径，请手动配置。
+版本: 4.1.0.18
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+ERROR:root:Неожиданная ошибка: 
+无法找到浏览器可执行文件路径，请手动配置。
+版本: 4.1.0.18
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+ERROR:root:Неожиданная ошибка: 
+无法找到浏览器可执行文件路径，请手动配置。
+版本: 4.1.0.18
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/11" 200 1634
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/11" 200 417
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/11" 200 1634
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 2597
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/1.1" 200 417
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 5251
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 3305
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/1.1" 200 417
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 3305
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 3305
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/1.1" 200 417
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 3305
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 472
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/1.1" 200 417
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 472
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 472
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/1.1" 200 412
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 472
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 472
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/1.1" 200 419
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 472
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 472
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/1.1" 200 419
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 472
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 5579
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/1.1" 200 419
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 5579
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 5583
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/1.1" 200 419
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 5583
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 5583
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/1.1" 200 419
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 5583
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
+INFO:root:Запуск инициализации браузера
+INFO:root:Прокси-сервер не настроен
+INFO:root:Создание ChromiumPage
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 472
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json/version HTTP/1.1" 200 417
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.util.retry:Converted retries value: 0 -> Retry(total=0, connect=None, read=None, redirect=None, status=None)
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): 127.0.0.1:9222
+DEBUG:urllib3.connectionpool:http://127.0.0.1:9222 "GET /json HTTP/1.1" 200 472
+INFO:root:Переменные окружения загружены
+INFO:root:Браузер успешно инициализирован
