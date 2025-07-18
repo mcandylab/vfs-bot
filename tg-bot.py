@@ -5,13 +5,14 @@ import asyncio
 import sqlite3
 import datetime
 import logging
+import os
 from auto_booker import SlotBooker
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
 
-# Bot token (visible for testing - replace with your actual token)
-BOT_TOKEN = '7016462249:AAEceONPlwLRA-RiaTYeq54znDiV8yMpTCw'
+# Bot token from environment variables
+BOT_TOKEN = os.getenv('BOT_TOKEN', '7016462249:AAEceONPlwLRA-RiaTYeq54znDiV8yMpTCw')
 
 bot = Bot(token=BOT_TOKEN)
 storage = MemoryStorage()
@@ -64,7 +65,6 @@ class Registration(StatesGroup):
     waiting_for_gender = State()
     waiting_for_passport = State()
     waiting_for_passport_date = State()
-    waiting_for_email = State()
     waiting_for_phone = State()
 
 
@@ -94,6 +94,18 @@ def init_db():
                 last_active TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ''')
+        
+        # Add missing columns if they don't exist
+        try:
+            conn.execute('ALTER TABLE users ADD COLUMN category TEXT')
+        except sqlite3.OperationalError:
+            pass  # Column already exists
+        
+        try:
+            conn.execute('ALTER TABLE users ADD COLUMN subcategory TEXT')
+        except sqlite3.OperationalError:
+            pass  # Column already exists
+        
         conn.execute('''
             CREATE TABLE IF NOT EXISTS metrics (
                 slots_checked INTEGER DEFAULT 0,
@@ -266,13 +278,6 @@ async def process_passport(message: types.Message, state: FSMContext):
 @dp.message(Registration.waiting_for_passport_date)
 async def process_passport_date(message: types.Message, state: FSMContext):
     await state.update_data(passport_date=message.text)
-    await message.answer("Введите адрес электронной почты:")
-    await state.set_state(Registration.waiting_for_email)
-
-
-@dp.message(Registration.waiting_for_email)
-async def process_email(message: types.Message, state: FSMContext):
-    await state.update_data(email=message.text)
     await message.answer("Введите номер телефона:")
     await state.set_state(Registration.waiting_for_phone)
 
@@ -295,7 +300,7 @@ async def process_city(callback: types.CallbackQuery, state: FSMContext):
     city_name = dict(CITIES).get(city_code, "Неизвестно")
     await state.update_data(city=city_name)
 
-    # Сохраняем все данные в БД
+    # Сохраняем все данные в БД, email берем из .env
     user_data = await state.get_data()
     save_user_data(
         user_id=callback.from_user.id,
@@ -303,7 +308,7 @@ async def process_city(callback: types.CallbackQuery, state: FSMContext):
         gender=user_data.get("gender"),
         passport=user_data.get("passport"),
         passport_date=user_data.get("passport_date"),
-        email=user_data.get("email"),
+        email=os.getenv('YOUR_EMAIL', ''),
         phone=user_data.get("phone"),
         city=user_data.get("city")
     )

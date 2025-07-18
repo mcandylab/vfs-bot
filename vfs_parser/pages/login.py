@@ -1,5 +1,6 @@
 import random
 import time
+import os
 
 from DrissionPage.errors import PageDisconnectedError
 
@@ -27,10 +28,26 @@ def login_to_vfs(page, max_attempts=3):
                     cookie_btn.click()
                     print(f"Cookies accepted ({wait_random_delay():.1f} сек)")
 
-                page.ele('xpath://input[@id="email"]').input('EMAIL')
-                wait_random_delay()
+                # Ждем загрузки формы входа
+                if page.ele('xpath://input[@id="email"]', timeout=15):
+                    page.ele('xpath://input[@id="email"]').input(os.getenv('YOUR_EMAIL', ''))
+                    wait_random_delay()
 
-                page.ele('xpath://input[@id="password"]').input('PASSWORD')
+                    page.ele('xpath://input[@id="password"]').input(os.getenv('PASSWORD', ''))
+                else:
+                    print("Email field not found, trying alternative selectors...")
+                    # Попробуем другие селекторы
+                    email_field = page.ele('css:input[type="email"]', timeout=5) or page.ele('css:input[name="email"]', timeout=5)
+                    if email_field:
+                        email_field.input(os.getenv('YOUR_EMAIL', ''))
+                        wait_random_delay()
+                        
+                        pwd_field = page.ele('css:input[type="password"]', timeout=5) or page.ele('css:input[name="password"]', timeout=5)
+                        if pwd_field:
+                            pwd_field.input(os.getenv('PASSWORD', ''))
+                    else:
+                        print("No email/password fields found")
+                        continue
                 wait_random_delay()
 
                 if is_cloudflare_bypass(page, verbose=True):

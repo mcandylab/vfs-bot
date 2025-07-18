@@ -1,84 +1,174 @@
-# VFS-Global
+# VFS Global Visa Appointment Monitor
 
-# Инструкция по запуску сайта (Flask)
+Система мониторинга свободных слотов для записи на визу в VFS Global с интеграцией Telegram-бота и веб-дашборда.
 
-1. **Установите Python 3.10+**  
-   Скачать: https://www.python.org/downloads/
+## Описание
 
-2. **Создайте и активируйте виртуальное окружение:**
-   ```
-   python -m venv venv
-   # Для Windows:
-   venv\Scripts\activate
-   # Для Linux/Mac:
-   source venv/bin/activate
-   ```
+Проект включает:
+- **Telegram Bot** - интерфейс для пользователей
+- **Flask Web Dashboard** - веб-дашборд с метриками
+- **VFS Parser/Monitor** - автоматический мониторинг слотов
+- **Database** - SQLite база данных для хранения данных
 
-3. **Установите зависимости:**
-   ```
-   pip install -r requirements.txt
-   ```
+## Быстрый старт с Docker
 
-4. **Запустите Flask-приложение:**
-   ```
-   cd site
-   python app.py
-   ```
+### 1. Подготовка
 
-5. **Откройте сайт в браузере:**
-   - Главная страница: http://127.0.0.1:5000/dashboard
+```bash
+# Клонировать репозиторий
+git clone <repository-url>
+cd VFS-bot-
 
+# Создать файл с переменными окружения
+cp .env.example .env
+```
 
----
+### 2. Настройка переменных окружения
 
-# Инструкция по запуску Telegram-бота
+Отредактируйте файл `.env`:
 
-1. **Убедитесь, что активировано виртуальное окружение и установлены зависимости (см. выше).**
+```env
+# VFS Global данные для входа
+YOUR_EMAIL=your_email@example.com
+PASSWORD=your_password
 
-2. **Укажите токен бота в файле `tg-bot.py`:**
-   ```python
-   BOT_TOKEN = 'ВАШ_ТОКЕН_ТУТ'
-   ```
+# Личная информация
+FIRST_NAME=Your_First_Name
+LAST_NAME=Your_Last_Name
+PASSPORT_NUMBER=AB1234567
+PASSPORT_YEAR=2020
+BIRTH_DAY=01/01/1990
+SEX=Male
+NATIONALITY=BLR
+COUNTRY_CODE=+375
+PHONE_NUMBER=291234567
 
-3. **Запустите бота:**
-   ```
-   python tg-bot.py
-   ```
+# Настройки визы
+CITY=Minsk
+VISA_CATEGORY=C
+VISA_SUBCATEGORY=C01
 
+# Telegram Bot
+BOT_TOKEN=1234567890:ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
----
+# Email уведомления (опционально)
+SMTP_SERVER=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USERNAME=your_email@gmail.com
+SMTP_PASSWORD=your_app_password
 
-# Как запустить сайт и бота на сервере (Linux)
+# Прокси (опционально)
+PROXY_SERVER=http://proxy.example.com:8080
+```
 
-1. **Установите Python 3.10+ и необходимые пакеты (см. выше).**
+### 3. Запуск
 
-2. **Запустите сайт с помощью `nohup` (работа в фоне):**
-   ```
-   cd /path/to/VFS-Global/site
-   nohup python app.py > ../site.log 2>&1 &
-   ```
+```bash
+# Запустить все сервисы
+docker-compose up -d
 
-3. **Запустите Telegram-бота с помощью `nohup`:**
-   ```
-   cd /path/to/VFS-Global
-   nohup python tg-bot.py > bot.log 2>&1 &
-   ```
+# Проверить статус
+docker-compose ps
 
-4. **Проверьте, что процессы работают:**
-   ```
-   ps aux | grep python
-   tail -f site/site.log
-   tail -f bot.log
-   ```
+# Просмотреть логи
+docker-compose logs -f
+```
 
-5. **Остановить процесс можно через `kill` по PID:**
-   ```
-   ps aux | grep python
-   kill <PID>
-   ```
+### 4. Доступ к сервисам
 
----
+- **Веб-дашборд**: http://localhost:5000
+- **Telegram Bot**: найдите своего бота в Telegram и отправьте `/start`
 
-**Примечания:**
-- Для автозапуска используйте systemd или supervisor.
-- Для публичного доступа к сайту используйте nginx как reverse proxy.
+## Управление сервисами
+
+```bash
+# Остановить все сервисы
+docker-compose down
+
+# Перезапустить определенный сервис
+docker-compose restart telegram-bot
+
+# Просмотреть логи конкретного сервиса
+docker-compose logs -f vfs-monitor
+
+# Пересобрать образы
+docker-compose up --build -d
+```
+
+## Структура проекта
+
+```
+VFS-bot-/
+├── docker-compose.yml      # Конфигурация Docker Compose
+├── Dockerfile             # Образ для всех сервисов
+├── requirements.txt       # Python зависимости
+├── .env.example          # Пример переменных окружения
+│
+├── site/                 # Flask веб-дашборд
+│   ├── app.py           # Главный файл приложения
+│   └── templates/       # HTML шаблоны
+│
+├── vfs_parser/          # Модуль мониторинга VFS
+│   ├── monitoring.py    # Основной скрипт мониторинга
+│   ├── config/          # Конфигурация браузера
+│   ├── pages/           # Скрипты для работы со страницами
+│   └── utils/           # Утилиты
+│
+├── tg-bot.py            # Telegram бот
+├── auto_booker.py       # Автоматическое бронирование
+├── database.py          # Работа с базой данных
+└── database.db          # SQLite база данных
+```
+
+## Функциональность
+
+### Telegram Bot
+- Регистрация пользователей
+- Настройка параметров визы
+- Запуск/остановка мониторинга
+- Уведомления о свободных слотах
+
+### Web Dashboard
+- Просмотр метрик в реальном времени
+- Мониторинг активных пользователей
+- Отслеживание ошибок
+- Prometheus метрики
+
+### VFS Monitor
+- Автоматическая проверка слотов
+- Обход Cloudflare защиты
+- Email уведомления
+- Логирование ошибок
+
+## Разработка
+
+### Локальная разработка без Docker
+
+```bash
+# Создать виртуальное окружение
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# или
+venv\Scripts\activate     # Windows
+
+# Установить зависимости
+pip install -r requirements.txt
+
+# Запустить сервисы отдельно
+python site/app.py                    # Веб-дашборд
+python tg-bot.py                      # Telegram бот
+python vfs_parser/monitoring.py      # VFS мониторинг
+```
+
+### Отладка
+
+```bash
+# Подключиться к контейнеру
+docker-compose exec telegram-bot bash
+
+# Просмотреть логи с фильтрацией
+docker-compose logs vfs-monitor | grep ERROR
+
+# Проверить переменные окружения
+docker-compose exec telegram-bot printenv | grep BOT_TOKEN
+```

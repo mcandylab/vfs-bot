@@ -46,13 +46,23 @@ class VisaOpenPage:
 
 
             options = DrissionPage.ChromiumOptions()
-            options.set_browser_path(r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe")
-            options.set_user_data_path(r"C:\Users\USER\AppData\Local\Temp\edge_profile")
-            options.set_argument("--remote-debugging-port=9222")
-            options.incognito(True)
+            
+            # Docker/Linux configuration для AMD64
+            options.set_browser_path("/usr/bin/google-chrome-stable")
+            options.set_user_data_path("/tmp/chrome_profile")
+            options.set_argument("--headless=new")
+            options.set_argument("--no-sandbox")
+            options.set_argument("--disable-dev-shm-usage")
+            options.set_argument("--disable-gpu")
+            options.set_argument("--disable-web-security")
+            options.set_argument("--disable-features=VizDisplayCompositor")
+            options.set_argument("--disable-extensions")
+            options.set_argument("--disable-plugins")
+            options.set_argument("--window-size=1920,1080")
             options.set_argument("--lang=en-US,en")
             options.set_argument("--disable-blink-features=AutomationControlled")
             options.set_argument(f"--user-agent={random.choice(USER_AGENTS)}")
+            options.set_argument("--remote-debugging-port=9222")
 
             if 'PROXY_SERVER' in os.environ:
                 options.set_argument(f"--proxy-server={os.environ['PROXY_SERVER']}")

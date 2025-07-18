@@ -1,0 +1,85 @@
+version: '3.8'
+
+services:
+  telegram-bot:
+    build: .
+    container_name: vfs-telegram-bot
+    command: python tg-bot.py
+    volumes:
+      - .:/app/data
+      - ./tmp:/app/tmp
+    working_dir: /app/data
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+      - YOUR_EMAIL=${YOUR_EMAIL}
+      - PASSWORD=${PASSWORD}
+      - FIRST_NAME=${FIRST_NAME}
+      - LAST_NAME=${LAST_NAME}
+      - PASSPORT_NUMBER=${PASSPORT_NUMBER}
+      - PASSPORT_YEAR=${PASSPORT_YEAR}
+      - BIRTH_DAY=${BIRTH_DAY}
+      - SEX=${SEX}
+      - NATIONALITY=${NATIONALITY}
+      - COUNTRY_CODE=${COUNTRY_CODE}
+      - PHONE_NUMBER=${PHONE_NUMBER}
+      - CITY=${CITY}
+      - VISA_CATEGORY=${VISA_CATEGORY}
+      - VISA_SUBCATEGORY=${VISA_SUBCATEGORY}
+      - SMTP_SERVER=${SMTP_SERVER}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USERNAME=${SMTP_USERNAME}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+      - PROXY_SERVER=${PROXY_SERVER}
+    restart: unless-stopped
+    depends_on:
+      - web-dashboard
+
+  web-dashboard:
+    build: .
+    container_name: vfs-web-dashboard
+    command: python site/app.py
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app/data
+      - ./site:/app/site
+    working_dir: /app/data
+    environment:
+      - FLASK_ENV=production
+      - FLASK_APP=site/app.py
+    restart: unless-stopped
+
+  vfs-monitor:
+    build: .
+    container_name: vfs-monitor
+    command: python vfs_parser/monitoring.py
+    volumes:
+      - .:/app/data
+      - ./tmp:/app/tmp
+    working_dir: /app/data
+    environment:
+      - YOUR_EMAIL=${YOUR_EMAIL}
+      - PASSWORD=${PASSWORD}
+      - FIRST_NAME=${FIRST_NAME}
+      - LAST_NAME=${LAST_NAME}
+      - PASSPORT_NUMBER=${PASSPORT_NUMBER}
+      - PASSPORT_YEAR=${PASSPORT_YEAR}
+      - BIRTH_DAY=${BIRTH_DAY}
+      - SEX=${SEX}
+      - NATIONALITY=${NATIONALITY}
+      - COUNTRY_CODE=${COUNTRY_CODE}
+      - PHONE_NUMBER=${PHONE_NUMBER}
+      - CITY=${CITY}
+      - VISA_CATEGORY=${VISA_CATEGORY}
+      - VISA_SUBCATEGORY=${VISA_SUBCATEGORY}
+      - SMTP_SERVER=${SMTP_SERVER}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USERNAME=${SMTP_USERNAME}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+      - PROXY_SERVER=${PROXY_SERVER}
+    restart: unless-stopped
+    depends_on:
+      - web-dashboard
+
+volumes:
+  app_data:

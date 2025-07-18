@@ -44,6 +44,7 @@ def init_db():
                 check_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 slots_available BOOLEAN,
                 FOREIGN KEY(user_id) REFERENCES users(user_id)
+            )
         ''')
 
 
