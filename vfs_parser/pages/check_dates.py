@@ -27,26 +27,26 @@ def check_dates(page):
         is_loader_hide(page)
 
         page.ele('xpath://*[@id="mat-select-value-1"]/span').click()
-        page.ele(f'xpath://span[contains(text(),"Poland Visa Application Center-{os.environ["city"]}")]').click()
+        page.ele(f'xpath://span[contains(text(),"Poland Visa Application Center-{os.environ["CITY"]}")]').click()
 
         is_loader_hide(page)
 
         page.ele(
             'xpath:/html/body/app-root/div/main/div/app-eligibility-criteria/section/form/mat-card[1]/form/div[2]/mat-form-field/div[1]/div/div[2]/mat-select/div/div[1]/span').click()
-        page.ele(f'xpath://span[contains(text(), "{os.environ["visa_category"]}")]').click()
+        page.ele(f'xpath://span[contains(text(), "{os.environ["VISA_CATEGORY"]}")]').click()
 
         is_loader_hide(page)
 
         page.scroll.down(600)
         page.ele(
             'xpath:/html/body/app-root/div/main/div/app-eligibility-criteria/section/form/mat-card[1]/form/div[3]/mat-form-field/div[1]/div/div[2]/mat-select/div/div[1]/span').click()
-        page.ele(f'xpath://span[contains(text(),"{os.environ["visa_subcategory"]}")]').click()
+        page.ele(f'xpath://span[contains(text(),"{os.environ["VISA_SUBCATEGORY"]}")]').click()
 
         is_loader_hide(page)
 
         page.ele(
             'css:body > app-root > div > main > div > app-eligibility-criteria > section > form > mat-card.mat-mdc-card.mdc-card.form-card.ng-star-inserted > form > div:nth-child(7) > div.datepicker-div.form-group > input').input(
-            os.environ['birth_day'])
+            os.environ['BIRTH_DAY'])
         page.close()
     except Exception as e:
         log_error(str(e))

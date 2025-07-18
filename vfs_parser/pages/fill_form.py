@@ -23,9 +23,9 @@ def fill_form(page):
         first_name_xpath = 'xpath:/html/body/app-root/div/main/div/app-applicant-details/section/mat-card[1]/form/app-dynamic-form/div/div/app-dynamic-control[6]/div/div/div/app-input-control/div/mat-form-field/div[1]/div/div[2]/input'
         last_name_xpath = 'xpath:/html/body/app-root/div/main/div/app-applicant-details/section/mat-card[1]/form/app-dynamic-form/div/div/app-dynamic-control[7]/div/div/div/app-input-control/div/mat-form-field/div[1]/div/div[2]/input'
         sex_dropdown_path = 'xpath:/html/body/app-root/div/main/div/app-applicant-details/section/mat-card[1]/form/app-dynamic-form/div/div/app-dynamic-control[8]/div/div/div/app-dropdown/div/mat-form-field/div[1]/div/div[2]/mat-select/div/div[1]/span'
-        sex_xpath = f'xpath://span[contains(text(),"{os.environ["sex"]}")]'
+        sex_xpath = f'xpath://span[contains(text(),"{os.environ["SEX"]}")]'
         nationality_dropbox_xpath = 'xpath:/html/body/app-root/div/main/div/app-applicant-details/section/mat-card[1]/form/app-dynamic-form/div/div/app-dynamic-control[9]/div/div/div/app-dropdown/div/mat-form-field/div[1]/div/div[2]/mat-select/div/div[1]/span'
-        nationality_xpath = f'xpath://span[contains(text(),"{os.environ["nationality"]}")]'
+        nationality_xpath = f'xpath://span[contains(text(),"{os.environ["NATIONALITY"]}")]'
         passport_year_xpath = f'xpath:/html/body/app-root/div/main/div/app-applicant-details/section/mat-card[1]/form/app-dynamic-form/div/div/app-dynamic-control[11]/div/div/div/app-ngb-datepicker/div/div[2]/input'
         country_code_xpath = 'xpath:/html/body/app-root/div/main/div/app-applicant-details/section/mat-card[1]/form/app-dynamic-form/div/div/app-dynamic-control[14]/div/div/div[2]/div[1]/app-input-control/div/mat-form-field/div[1]/div/div[2]/input'
         phone_number_xpath = 'xpath:/html/body/app-root/div/main/div/app-applicant-details/section/mat-card[1]/form/app-dynamic-form/div/div/app-dynamic-control[14]/div/div/div[2]/div[2]/app-input-control/div/mat-form-field/div[1]/div/div[2]/input'
@@ -36,9 +36,9 @@ def fill_form(page):
         time.sleep(30)
         page.ele(
             first_name_xpath).input(
-            os.environ['first_name'])
+            os.environ['FIRST_NAME'])
         page.ele(last_name_xpath).input(
-            os.environ['last_name'])
+            os.environ['LAST_NAME'])
         page.ele(sex_dropdown_path).click()
         page.ele(sex_xpath).click()
         page.ele(nationality_dropbox_xpath).click()
@@ -54,15 +54,15 @@ def fill_form(page):
         ''')
         time.sleep(2)
         page.ele(f'xpath:{input_xpath}').input(
-            os.environ['passport_number'])
+            os.environ['PASSPORT_NUMBER'])
         page.ele(passport_year_xpath).input(
-            os.environ['passport_year'])
+            os.environ['PASSPORT_YEAR'])
         page.ele(country_code_xpath).input(
-            os.environ['country_code'])
+            os.environ['COUNTRY_CODE'])
         page.ele(phone_number_xpath).input(
-            os.environ['phone_number'])
+            os.environ['PHONE_NUMBER'])
         page.ele(email_xpath).input(
-            os.environ['your_email'])
+            os.environ['YOUR_EMAIL'])
         time.sleep(2)
         page.ele(button_submit_text_xpath).click()
     except Exception as e:

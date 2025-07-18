@@ -37,8 +37,8 @@ class SlotBooker:
     def _login(self) -> bool:
         """Авторизация на сайте"""
         try:
-            self.page.ele("#email").input(os.environ.get('your_email', ''))
-            self.page.ele("#password").input(os.environ.get('password', ''))
+            self.page.ele("#email").input(os.environ.get('YOUR_EMAIL', ''))
+            self.page.ele("#password").input(os.environ.get('PASSWORD', ''))
             self.page.ele("xpath://button[@type='submit']").click()
             time.sleep(5)
             return True
@@ -62,9 +62,9 @@ class SlotBooker:
 
             # Заполнение формы
             form_data = {
-                'first_name': os.environ.get('first_name', ''),
-                'last_name': os.environ.get('last_name', ''),
-                'passport': os.environ.get('passport_number', '')
+                'first_name': os.environ.get('FIRST_NAME', ''),
+                'last_name': os.environ.get('LAST_NAME', ''),
+                'passport': os.environ.get('PASSPORT_NUMBER', '')
             }
 
             for field, xpath in FORM_FIELDS.items():
@@ -76,7 +76,7 @@ class SlotBooker:
             time.sleep(5)
 
             # Сохранение данных
-            save_user(1, "", booking_date=date, visa_type=os.environ.get('visa_category', ''), confirmation_code=self._get_confirmation_code())
+            save_user(1, "", booking_date=date, visa_type=os.environ.get('VISA_CATEGORY', ''), confirmation_code=self._get_confirmation_code())
 
             return True
         except:

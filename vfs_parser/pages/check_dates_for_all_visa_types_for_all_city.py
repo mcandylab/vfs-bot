@@ -54,7 +54,7 @@ def check_dates_for_all_visa_types_for_all_city(page):
                     else:
                         page.ele(f'xpath:/html/body/div[4]/div[2]/div/div/mat-option[{j + 1}]/span').click()
                         is_loader_hide(page)
-                        page.ele(birth_date_input).input(os.environ['birth_day'])
+                        page.ele(birth_date_input).input(os.environ['BIRTH_DAY'])
                 page.scroll.up(600)
         time.sleep(120)
     except Exception as e:

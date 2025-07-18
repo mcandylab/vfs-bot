@@ -21,7 +21,7 @@ def log_error(error_message):
 def check_dates_for_all_visa_types_for_one_city(page):
     try:
         city_dropdown = 'xpath://*[@id="mat-select-value-1"]/span'
-        city_option = f'xpath://span[contains(text(),"Poland Visa Application Center-{os.environ["city"]}")]'
+        city_option = f'xpath://span[contains(text(),"Poland Visa Application Center-{os.environ["CITY"]}")]'
         visa_type_dropdown = 'xpath:/html/body/app-root/div/main/div/app-eligibility-criteria/section/form/mat-card[1]/form/div[2]/mat-form-field/div[1]/div/div[2]/mat-select/div/div[1]/span'
         visa_subcategory_dropdown = 'xpath:/html/body/app-root/div/main/div/app-eligibility-criteria/section/form/mat-card[1]/form/div[3]/mat-form-field/div[1]/div/div[2]/mat-select/div/div[1]/span'
         options_container = 'xpath:/html/body/div[4]/div[2]/div/div'
@@ -52,7 +52,7 @@ def check_dates_for_all_visa_types_for_one_city(page):
                 page.ele(f'xpath:/html/body/div[4]/div[2]/div/div/mat-option[{j + 1}]/span').click()
                 is_loader_hide(page)
                 page.ele(birth_date_input).clear()
-                page.ele(birth_date_input).input(os.environ['birth_day'])
+                page.ele(birth_date_input).input(os.environ['BIRTH_DAY'])
                 dates_container = page.ele(
                     'xpath:/html/body/app-root/div/main/div/app-eligibility-criteria/section/form/mat-card[1]/form/div[5]/div').text
                 logging.basicConfig(level=logging.INFO)
